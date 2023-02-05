@@ -106,7 +106,7 @@ public class VacationDaysLeftCQRSHandlerReusingAggregate {
         VacationDaysInsufficientEvent event
     ) throws Exception {
         repository
-            .findById(event.getUserId())
+            .findById(event.getUserId())   // TODO:  key 관계가 잘못형성된..경우가 발생 correlation 정보가 없이 들어온 경우 어떻게 할것인가.
             .ifPresent(entity -> {
                 VacationDaysLeftAggregate aggregate = new VacationDaysLeftAggregate();
 
