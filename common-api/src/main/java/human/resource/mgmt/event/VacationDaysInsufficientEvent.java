@@ -9,4 +9,5 @@ public class VacationDaysInsufficientEvent {
 
     private String userId;
     private String vacationId;
+    private String reason;
 }
