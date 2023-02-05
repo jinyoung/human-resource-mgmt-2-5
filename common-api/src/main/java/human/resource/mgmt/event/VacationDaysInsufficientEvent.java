@@ -7,6 +7,6 @@ import lombok.ToString;
 @ToString
 public class VacationDaysInsufficientEvent {
 
-    private Long id;
+    private Long userId;
     private String vacationId;
 }
